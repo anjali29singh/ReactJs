@@ -12,8 +12,7 @@ import SearchParams from "./SearchParams";
 //     React.createElement("h3", {}, props.breed)
 //   );
 // };
-//whenever an event happens react re renders everything
-
+//whenever an event happens react re renders that component
 const App = () => {
   return (
     <div>
