@@ -1,7 +1,8 @@
+import "./../css/style.css";
 export default function Item({ item }) {
   return (
     <>
-      <div>{item}</div>
+      <div className="itemHeader">{item}</div>
     </>
   );
 }
