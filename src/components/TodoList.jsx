@@ -1,9 +1,9 @@
 /* eslint-disable react/prop-types */
 import Item from "./Item";
-
+import styles from "./todolist.module.css";
 export default function TodoList({ todos }) {
   return (
-    <div>
+    <div className={styles.list}>
       <ol>
         {todos.map((item, index) => (
           <li key={index}>
