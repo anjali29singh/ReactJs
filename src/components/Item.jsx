@@ -1,8 +1,8 @@
+/* eslint-disable react/prop-types */
 import styles from "./todoItem.module.css";
-// eslint-disable-next-line react/prop-types
-export default function Item({ item }) {
-  function handleDelete() {
-    console.log("delete button clicked");
+export default function Item({ item, todos, setTodos }) {
+  function handleDelete(item) {
+    setTodos(todos.filter((todo) => todo !== item));
   }
   return (
     <div className={styles.item}>
@@ -10,7 +10,10 @@ export default function Item({ item }) {
         {item}
 
         <span>
-          <button className={styles.deleteBtn} onClick={handleDelete}>
+          <button
+            className={styles.deleteBtn}
+            onClick={() => handleDelete(item)}
+          >
             X
           </button>
         </span>
